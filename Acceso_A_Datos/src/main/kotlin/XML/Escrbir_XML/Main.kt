@@ -18,7 +18,7 @@ fun main() {
 
     val db = dbf.newDocumentBuilder()
 
-    val ficheroXML = Path.of("src").resolve("main\\resources\\Escribir\\Escritura.xml")
+    val ficheroXML = Path.of("C:\\Users\\UsuarioT\\IdeaProjects\\AccesoADatos\\Acceso_A_Datos\\src\\main\\resources\\XML\\Escribir\\Escritura.xml")
 
     val document = db.parse(ficheroXML.toFile())
 
@@ -97,7 +97,7 @@ fun crearXML(nodos: Int, nombresA: ArrayList<String>, preciosA: ArrayList<String
 
     val source = DOMSource(document)
 
-    val r = StreamResult(Path.of("C:\\Users\\UsuarioT\\IdeaProjects\\XML\\src\\main\\resources\\Escribir\\Escritura.xml").toFile())
+    val r = StreamResult(Path.of("C:\\Users\\UsuarioT\\IdeaProjects\\AccesoADatos\\Acceso_A_Datos\\src\\main\\resources\\XML\\Escribir\\Escritura.xml").toFile())
 
     val optimus = TransformerFactory.newInstance().newTransformer()
 
