@@ -10,7 +10,7 @@ import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
 
 fun main(){
-    val fr = FileReader("C:\\Users\\UsuarioT\\IdeaProjects\\AccesoADatos\\Acceso_A_Datos\\src\\main\\resources\\XML\\Actividad 3\\CSV.txt")
+    val fr = FileReader("C:\\Users\\UsuarioT\\IdeaProjects\\AccesoADatos\\Acceso_A_Datos\\src\\main\\resources\\XML.xml\\Actividad 3\\CSV.txt")
     val br = BufferedReader(fr)
 
     var l: String
@@ -67,7 +67,7 @@ fun main(){
 
     val source = DOMSource(document)
 
-    val r = StreamResult(Path.of("C:\\Users\\UsuarioT\\IdeaProjects\\AccesoADatos\\Acceso_A_Datos\\src\\main\\resources\\XML\\Actividad 3\\empleados.xml").toFile())
+    val r = StreamResult(Path.of("C:\\Users\\UsuarioT\\IdeaProjects\\AccesoADatos\\Acceso_A_Datos\\src\\main\\resources\\XML.xml\\Actividad 3\\empleados.xml").toFile())
 
     val optimus = TransformerFactory.newInstance().newTransformer()
 

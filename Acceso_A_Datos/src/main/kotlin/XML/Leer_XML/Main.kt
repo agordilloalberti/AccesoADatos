@@ -33,11 +33,13 @@ fun main(){
 
         for (i in 0..<listNodos.length){
             var nodo = listNodos.item(i)
+            var id = ""
             var apellido: String = ""
-            var departamento: Int = 0
-            var salario: Double = 0.0
+            var departamento= ""
+            var salario=""
             if (nodo.nodeType == Node.ELEMENT_NODE) {
                 nodo = nodo as Element
+                id=nodo.getAttribute("id")
                 val napellido = nodo.getElementsByTagName("apellido")
                 for (j in 0..<napellido.length) {
                     val node = napellido.item(j)
@@ -49,19 +51,19 @@ fun main(){
                 for (j in 0..<ndepartamento.length) {
                     val node = ndepartamento.item(j)
                     if (node.nodeType == Node.ELEMENT_NODE) {
-                        departamento = node.textContent.toInt()
+                        departamento = node.textContent
                     }
                 }
                 val nsalario = nodo.getElementsByTagName("salario")
                 for (j in 0..<nsalario.length) {
                     val node = nsalario.item(j)
                     if (node.nodeType == Node.ELEMENT_NODE) {
-                        salario = node.textContent.toDouble()
+                        salario = node.textContent
                     }
                 }
 
             }
-            lista.add(Empleado(apellido,departamento,salario))
+            lista.add(Empleado(id,apellido,departamento,salario))
     }
         return lista
 }
