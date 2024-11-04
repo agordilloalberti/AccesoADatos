@@ -9,5 +9,5 @@ fun main(){
     val e =Empleado("19","Gordillo","IT","1.1")
     val r = XMLRepository()
     //r.insert(e,ficheroXML)
-    r.delete("3",ficheroXML)
+    //r.delete("3",ficheroXML)
 }

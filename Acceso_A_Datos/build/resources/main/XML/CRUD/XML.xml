@@ -23,9 +23,4 @@
         <Departamento>Marketing</Departamento>
         <Salario>2900.0</Salario>
     </empleado>
-    <empleado id="19">
-        <apellido>Gordillo</apellido>
-        <dpto>IT</dpto>
-        <salario>1.1</salario>
-    </empleado>
 </empleados>
